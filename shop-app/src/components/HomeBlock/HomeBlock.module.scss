@@ -1,0 +1,42 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+@import 'src/components/Header/Header.module';
+
+.carousel{
+  width: 50vw;
+  >div{
+    padding-right: 10vw!important;
+    width: 100%;
+    height: calc(100vh - 70px);
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+  }
+}
+
+.infoHomeBlock{
+  width: 50vw;
+  background-color: beige;
+  padding-top: 10vh;
+  padding-left: 10vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  h1{
+    color: #403e3e;
+    font-size: 40px;
+    line-height: 32px;
+  }
+  p{
+    padding-top: 1vh;
+    font-size: 16px;
+  }
+  .buttonInfo{
+    width: 35vh;
+    height: 35vh;
+    background-color: brown;
+    margin-top: 5vh;
+  }
+}

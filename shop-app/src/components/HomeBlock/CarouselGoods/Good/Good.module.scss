@@ -1,0 +1,38 @@
+.photoBlock{
+  position: relative;
+  overflow: hidden;
+  width: 35vw;
+  height: 33vw;
+  margin-left: 5vw;
+  h3{
+    text-align: left;
+  }
+  div{
+    display: flex;
+    height: 30vw;
+    img{
+      height: 30vw;
+      width: 35vw;
+      background-color: brown;
+    }
+  }
+  .arrowsBlock{
+    position: absolute;
+    top: 13.5vw;
+    z-index: 100000;
+    width: 100%;
+    height: 3vw;
+    display: flex;
+    justify-content: space-between;
+    svg{
+      font-size: 3vw;
+      color: rgba(0, 0, 0, 0.3);
+      z-index: 100000;
+      transition: color 400ms linear;
+      &:hover{
+        color: rgba(0, 0, 0, 0.5);
+        cursor: pointer;
+      }
+    }
+  }
+}
