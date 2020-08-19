@@ -5,21 +5,24 @@
 @import 'src/components/Header/Header.module';
 
 .carousel{
+  overflow: hidden !important;
   width: 50vw;
+  padding-right: 10vw !important;
+  //height: calc(100vh - 70px);
+  display: flex !important;
+  align-items: center !important;
   >div{
-    padding-right: 10vw!important;
+    overflow: hidden !important;
     width: 100%;
-    height: calc(100vh - 70px);
     display: flex !important;
     flex-direction: column !important;
-    justify-content: center !important;
+    align-items: center !important;
   }
 }
 
 .infoHomeBlock{
   width: 50vw;
   background-color: beige;
-  padding-top: 10vh;
   padding-left: 10vw;
   display: flex;
   flex-direction: column;
@@ -34,9 +37,33 @@
     font-size: 16px;
   }
   .buttonInfo{
-    width: 35vh;
-    height: 35vh;
-    background-color: brown;
+    width: 37vh;
+    height: 37vh;
+    background-color: #403e3e;
     margin-top: 5vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:hover{
+      cursor: pointer;
+      img{
+        //transform: translateY(37vw);
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+    img{
+      height: 37vh;
+      transform: translateX(5%);
+      transition: all 500ms linear;
+    }
+    .more{
+      position: absolute;
+      text-decoration: none;
+      color: beige;
+      font-size: 1.5vw;
+      margin: auto;
+    }
   }
 }

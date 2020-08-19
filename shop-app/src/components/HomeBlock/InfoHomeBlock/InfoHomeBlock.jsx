@@ -1,5 +1,6 @@
 import React from "react"
 import style from './../HomeBlock.module.scss'
+import {NavLink} from "react-router-dom";
 
 const InfoHomeBlock = () => {
     return (
@@ -14,6 +15,8 @@ const InfoHomeBlock = () => {
                     посетителя сайта.
                 </p>
                 <div className={style.buttonInfo}>
+                    <NavLink to={'/'} className={style.more}>Подробнее</NavLink>
+                    <img src={'https://i.imgur.com/PQoz6xH.jpg'}/>
                 </div>
             </div>
         </div>

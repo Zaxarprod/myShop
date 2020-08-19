@@ -1,3 +1,6 @@
+.mainWrapper{
+  overflow: hidden;
+}
 .photoBlock{
   position: relative;
   overflow: hidden;
@@ -6,8 +9,9 @@
   margin-left: 5vw;
   h3{
     text-align: left;
+    font-size: 2vw;
   }
-  div{
+  .photos{
     display: flex;
     height: 30vw;
     img{
@@ -24,8 +28,10 @@
     height: 3vw;
     display: flex;
     justify-content: space-between;
+    padding-left: 0.5vw;
+    padding-right: 0.5vw;
     svg{
-      font-size: 3vw;
+      font-size: 2.5vw;
       color: rgba(0, 0, 0, 0.3);
       z-index: 100000;
       transition: color 400ms linear;
@@ -34,5 +40,37 @@
         cursor: pointer;
       }
     }
+  }
+}
+.interfaceBlock{
+  width: 100%;
+  height: 6vh;
+  display: flex;
+  padding-left: 5vw;
+  >div{
+    width: 15%;
+    height: 6vh;
+    text-align: center;
+    line-height: 7vh;
+    transition: background-color 500ms ease-out;
+    svg{
+      font-size: 3vh;
+    }
+  }
+  .price{
+    height: 6vh;
+    width: 70%;
+    h3{
+      text-align: left;
+      font-size: 1.4vw;
+    }
+  }
+  .buy:hover{
+    background-color: #e3e3a5;
+    cursor: pointer;
+  }
+  .cart:hover{
+    background-color: #e3e3a5;
+    cursor: pointer;
   }
 }

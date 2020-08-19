@@ -23,7 +23,7 @@ const HomeBlock_1 = () => {
     }
     return (
         <div className={style.homeBlock_1}
-             onWheel={handleScroll}
+             //onWheel={handleScroll}
              ref={scrollBlock} >
             <InfoHomeBlock />
             <CarouselGoods />
