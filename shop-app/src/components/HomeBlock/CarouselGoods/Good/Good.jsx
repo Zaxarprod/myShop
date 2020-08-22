@@ -5,7 +5,7 @@ import RightOutlined from "@ant-design/icons/lib/icons/RightOutlined";
 import ShoppingOutlined from "@ant-design/icons/lib/icons/ShoppingOutlined";
 import ShoppingCartOutlined from "@ant-design/icons/lib/icons/ShoppingCartOutlined";
 
-const Good = () => {
+const Good = ({good}) => {
     const [translateX, setTranslateX] = useState(0)
     let nextPhoto = () => {
         if(translateX !== -70){
@@ -26,15 +26,17 @@ const Good = () => {
                 </div>
                 <div style={{transform: `translateX(${translateX}vw)`, transition: 'all 200ms linear'}}
                     className={style.photos}>
-                    <img src={''}/>
-                    <img src={''}/>
-                    <img src={''}/>
+                    {
+                        good.img.map((image)=>{
+                            return <img src={image}/>
+                        })
+                    }
                 </div>
-                <h3>Название товара</h3>
+                <h3>{good.name}</h3>
             </div>
             <div className={style.interfaceBlock}>
                 <div className={style.price}>
-                    <h3>Цена</h3>
+                    <h3>{good.price}</h3>
                 </div>
                 <div className={style.buy}>
                     <ShoppingOutlined />

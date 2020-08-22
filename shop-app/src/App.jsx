@@ -6,6 +6,7 @@ import 'antd/dist/antd.css'
 import Header from "./components/Header/Header"
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer/Footer";
+import Shop from "./pages/shop/Shop";
 
 const App = () => {
     let [opacityHeader, setOpacityHeader] = useState(1)
@@ -28,7 +29,7 @@ const App = () => {
             <Row>
                 <Col span={24}>
                     <Route path={'/'} exact component={Home}/>
-                    <Route path={'/shop'} exact component={Home}/>
+                    <Route path={'/shop'} component={Shop}/>
                     <Route path={'/info'} exact component={Home}/>
                     <Route path={'/contacts'} exact component={Home}/>
                 </Col>

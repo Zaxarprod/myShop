@@ -2,16 +2,19 @@ import {createStore, compose} from 'redux';
 import {combineReducers} from 'redux';
 import {applyMiddleware} from 'redux';
 import Middleware from 'redux-thunk';
+import homeReducer from "./home-reducer";
+import shopReducer from "./shop-reducer";
+import filterReducer from "./filter-reducer";
 
 
 let reducers = combineReducers(
     {
-
+        home: homeReducer,
+        shop: shopReducer,
+        filter: filterReducer,
     }
 )
 
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+const store = createStore(reducers, applyMiddleware(Middleware));
 
-const store = createStore(reducers, composeEnhancers(applyMiddleware(Middleware)))
-
-export default store
+export default store;
