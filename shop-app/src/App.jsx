@@ -7,21 +7,22 @@ import Header from "./components/Header/Header"
 import Home from "./pages/home/Home";
 import Footer from "./components/Footer/Footer";
 import Shop from "./pages/shop/Shop";
+import connect from "react-redux/lib/connect/connect";
+import {setTranslate, setTranslateTC} from "./redux/app-reducer";
 
-const App = () => {
-    let [opacityHeader, setOpacityHeader] = useState(1)
+const App = ({translate, setTranslate}) => {
     return (
         <div className="container" onWheel={(e)=>{
             if(e.deltaY>0){
-                setOpacityHeader(-70)
+                setTranslate(-70)
             }else{
-                setOpacityHeader(-1)
+                setTranslate(-1)
             }
         }}>
             <Row>
                 <Col span={24}>
                     <Header styles={{
-                        transform: `translateY(${opacityHeader}px)`,
+                        transform: `translateY(${translate}px)`,
                         transition: 'all 500ms ease-out',
                     }}/>
                 </Col>
@@ -43,4 +44,20 @@ const App = () => {
     )
 }
 
-export default App;
+
+class AppContainer extends React.Component{
+    render(){
+        return (
+            <App
+                setTranslate={this.props.setTranslateTC}
+                translate={this.props.translate}
+            />
+        )
+    }
+}
+
+let mapStateToProps = (state) => ({
+    translate: state.app.translate,
+})
+
+export default connect(mapStateToProps,{setTranslateTC,})(AppContainer);

@@ -12,7 +12,6 @@ const ShowFiltersBlock = ({filters,delFilterTC}) => {
                         <li>
                             {filter}
                             <p onClick={()=>{
-                                debugger
                                 delFilterTC(filter)
                             }}>
                                 &times;
@@ -25,13 +24,15 @@ const ShowFiltersBlock = ({filters,delFilterTC}) => {
     )
 }
 
-const ShowFilersBlockContainer = (props) => {
-    return (
-        <ShowFiltersBlock
-            filters={props.filters}
-            delFilterTC={props.delFilterTC}
-        />
-    )
+class ShowFilersBlockContainer extends React.Component {
+    render() {
+        return (
+            <ShowFiltersBlock
+                filters={this.props.filters}
+                delFilterTC={this.props.delFilterTC}
+            />
+        )
+    }
 }
 
 let mapStateToProps = (state) => ({

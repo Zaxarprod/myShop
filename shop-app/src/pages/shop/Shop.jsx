@@ -3,6 +3,7 @@ import style from './Shop.module.scss'
 import FilterBlock from "../../components/FilterBlock/FilterBlock";
 import GoodsBlock from "../../components/GoodsBlock/GoodsBlock";
 import ShowFiltersBlock from "../../components/ShowFiltersBlock/ShowFiltersBlock";
+import AdditFilters from "../../components/AdditFilters/AdditFilters";
 
 const Shop = () => {
     return (
@@ -12,6 +13,7 @@ const Shop = () => {
                 <ShowFiltersBlock />
                 <GoodsBlock />
             </div>
+            <AdditFilters />
         </div>
     )
 }

@@ -1,7 +1,9 @@
 const ADD_FILTER = 'filter/ADD-FILTER'
 const DELETE_FILTER = 'filter/DELETE_FILTER'
+const SET_ADDIT_FILTER = 'filter/SET-ADDIT-FILTER'
 
 let initialState = {
+    additFilter: null,
     filters: [],
     categories: [
         {
@@ -24,12 +26,18 @@ const filterReducer = (state = initialState, action) => {
         case ADD_FILTER:
             return {
                 ...state,
-                filters: [...state.filters, action.newFilter]
+                filters: (state.filters.indexOf(action.newFilter) !== -1)?state.filters:
+                    [...state.filters, action.newFilter],
             }
         case DELETE_FILTER:
             return {
                 ...state,
                 filters: state.filters.filter((el)=>(el!==action.filter))
+            }
+        case SET_ADDIT_FILTER:
+            return {
+                ...state,
+                additFilter: action.value,
             }
         default:
             return state
@@ -46,15 +54,27 @@ const delFilterAC = (filter) => ({
     filter,
 })
 
+const setAdditFilterAC = (value) => ({
+    type: SET_ADDIT_FILTER,
+    value,
+})
+
 export const addFilterTC = (newFilter) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(newFilterAC(newFilter))
     }
 }
 
 export const delFilterTC = (filter) => {
-    return (dispatch) => {
+    return async (dispatch) => {
         dispatch(delFilterAC(filter))
     }
 }
+
+export const setAdditFilterTC = (value) => {
+    return async (dispatch) => {
+        dispatch(setAdditFilterAC(value))
+    }
+}
+
 export default filterReducer

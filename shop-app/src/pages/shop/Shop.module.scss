@@ -12,4 +12,15 @@
     width: 100%;
     flex-direction: column;
   }
+  .additFilters{
+    position: fixed;
+    top: 70px;
+    right: 0;
+    padding-top: 2vh;
+    .selectForm{
+      background-color: beige;
+      border: 1px solid #bfb9b9;
+      box-shadow: none !important;
+    }
+  }
 }

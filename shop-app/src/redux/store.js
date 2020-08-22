@@ -5,6 +5,7 @@ import Middleware from 'redux-thunk';
 import homeReducer from "./home-reducer";
 import shopReducer from "./shop-reducer";
 import filterReducer from "./filter-reducer";
+import appReducer from "./app-reducer";
 
 
 let reducers = combineReducers(
@@ -12,6 +13,7 @@ let reducers = combineReducers(
         home: homeReducer,
         shop: shopReducer,
         filter: filterReducer,
+        app: appReducer,
     }
 )
 

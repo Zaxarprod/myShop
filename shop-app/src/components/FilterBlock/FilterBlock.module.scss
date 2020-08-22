@@ -8,6 +8,7 @@
   height: 100vh;
   padding-top: 70px;
   .filterList{
+    position: fixed;
     padding-top: 4vh;
     padding-left: 5vw;
     list-style: none;
@@ -19,6 +20,14 @@
         list-style: none;
         text-decoration: none;
         padding-left: 2vw;
+        padding-right: 6vw;
+        .bold{
+          font-weight: bold;
+        }
+        p{
+          margin:0;
+          float: right;
+        }
       }
     }
     .filterCat:hover {

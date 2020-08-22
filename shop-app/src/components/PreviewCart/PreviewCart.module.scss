@@ -1,0 +1,84 @@
+.previewCart{
+  width: calc(100%/3);
+  margin:0;
+  padding-top: 2vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  .photoBlock{
+    width: 100%;
+    position: relative;
+    .firstPhoto{
+      position: absolute;
+      left:2.5%;
+      width: 95%;
+      height: calc(70vw * 0.33 * 0.95 * 1.4);
+      background-color: brown;
+      transition: opacity 0.5s ease-in;
+      &:hover{
+        opacity: 0 !important;
+      }
+
+    }
+    .secondPhoto{
+      margin-left: 2.5%;
+      z-index: 1000000;
+      width: 95%;
+      height: calc(70vw * 0.33 * 0.95 * 1.4);
+      background-color: black;
+      transition: opacity 0.5s ease-in;
+    }
+  }
+  .priceBlock{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5vh;
+    color: #403e3e;
+    padding-top: 1vh;
+    p{
+      margin: 0;
+    }
+    ul{
+      text-decoration: none;
+      list-style: none;
+      li{
+        border: 1px solid #403e3e;
+        float: left;
+        width: 2.5vh;
+        height: 2.5vh;
+        background-color: gold;
+        margin-left: 1vh;
+      }
+    }
+  }
+  .nameBlock{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2.5vh;
+    color: #403e3e;
+    padding-top: 1vh;
+    p{
+      margin: 0;
+    }
+    a{
+      text-decoration: none;
+      color: #403e3e;
+      margin:0;
+      padding:0;
+    }
+    svg{
+      transition: all 0.5s linear;
+    }
+    svg:hover{
+      color: darken(#403e3e, 50%);
+      transform: scale(1.4);
+    }
+  }
+  .priceBlock{
+
+  }
+}
