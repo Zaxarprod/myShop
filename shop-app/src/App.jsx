@@ -9,6 +9,7 @@ import Footer from "./components/Footer/Footer";
 import Shop from "./pages/shop/Shop";
 import connect from "react-redux/lib/connect/connect";
 import {setTranslate, setTranslateTC} from "./redux/app-reducer";
+import Info from "./pages/info/Info";
 
 const App = ({translate, setTranslate}) => {
     return (
@@ -31,7 +32,7 @@ const App = ({translate, setTranslate}) => {
                 <Col span={24}>
                     <Route path={'/'} exact component={Home}/>
                     <Route path={'/shop'} component={Shop}/>
-                    <Route path={'/info'} exact component={Home}/>
+                    <Route path={'/info'} exact component={Info}/>
                     <Route path={'/contacts'} exact component={Home}/>
                 </Col>
             </Row>

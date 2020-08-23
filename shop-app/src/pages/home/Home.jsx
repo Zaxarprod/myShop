@@ -12,7 +12,7 @@ const Home = () => {
             <Parallax
                 blur={{min:0, max:3}}
                 bgImage={'https://cdn.news.bandsintown.com/wp-content/uploads/2017/06/TravisHeader.jpg'}
-                bgImageAlt="the cat"
+                bgImageAlt=""
                 strength={600}
             >
                 <HomeBlock_2 />
@@ -20,7 +20,7 @@ const Home = () => {
             <Parallax
                 blur={{min:0, max:1}}
                 bgImage={'https://pbs.twimg.com/media/DxiG1qWX0AIzt9i.jpg'}
-                bgImageAlt="the cat"
+                bgImageAlt=""
                 strength={300}
             >
                 <HomeBlock_3 />

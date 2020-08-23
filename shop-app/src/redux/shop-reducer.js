@@ -6,6 +6,7 @@ let initialState = {
             name: 'Название',
             price: 'Цена',
             colors: ['black','white','brown'],
+            sizes: ['L', 'M', 'S'],
         },
         {
             id: 1,
@@ -13,6 +14,7 @@ let initialState = {
             name: 'Название',
             price: 'Цена',
             colors: ['black','white','brown'],
+            sizes: ['L', 'M', 'S'],
         },
         {
             id: 2,
@@ -20,6 +22,7 @@ let initialState = {
             name: 'Название',
             price: 'Цена',
             colors: ['black','white','brown'],
+            sizes: ['L', 'M', 'S'],
         },
         {
             id: 3,
@@ -27,6 +30,7 @@ let initialState = {
             name: 'Название',
             price: 'Цена',
             colors: ['black','white','brown'],
+            sizes: ['L', 'M', 'S'],
         },
         {
             id: 4,
@@ -34,6 +38,7 @@ let initialState = {
             name: 'Название',
             price: 'Цена',
             colors: ['black','white','brown'],
+            sizes: ['L', 'M', 'S'],
         },
     ],
 }
