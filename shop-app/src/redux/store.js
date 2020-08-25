@@ -6,6 +6,7 @@ import homeReducer from "./home-reducer";
 import shopReducer from "./shop-reducer";
 import filterReducer from "./filter-reducer";
 import appReducer from "./app-reducer";
+import footerReducer from "./footer-reducer";
 
 
 let reducers = combineReducers(
@@ -14,6 +15,7 @@ let reducers = combineReducers(
         shop: shopReducer,
         filter: filterReducer,
         app: appReducer,
+        footer: footerReducer,
     }
 )
 

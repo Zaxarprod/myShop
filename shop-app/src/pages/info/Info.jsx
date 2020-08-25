@@ -1,6 +1,5 @@
 import React from "react"
 import style from './Info.module.scss'
-import HomeBlock_2 from "../../components/HomeBlock/HomeBlock_2";
 import {Parallax} from "react-parallax";
 import InfoBlock_1 from "../../components/InfoBlocks/InfoBlock_1";
 import InfoBlock_2 from "../../components/InfoBlocks/InfoBlock_2";
@@ -10,7 +9,7 @@ const Info = () => {
     return (
         <div className={style.info}>
             <Parallax
-                bgImage={'http://winallos.com/uploads/posts/2014-12/1419456448_prodyuser-kane-uest-kanye-west-reper.jpg'}
+                bgImage={'http://splashysplash.com/wp-content/uploads/2012/06/jay-z-ysl-belt-roc-a-fella-chains-50-cent-diddy-kanye.jpeg'}
                 bgImageStyle={{position:'absolute', top: '59%'}}
                 strength={900}
                 renderLayer={percentage => {

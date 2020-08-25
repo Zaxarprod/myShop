@@ -1,4 +1,64 @@
 .footer{
   width: 100%;
   height: 300px;
+  background-color: #deded2;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 60px;
+  .footerImage{
+    width: 30%;
+    float: right;
+    img{
+      background-color: #403e3e;
+      width: 100%;
+      height: 200px;
+    }
+  }
+  .footerList{
+    list-style: none;
+    text-decoration: none;
+    display: flex;
+    width: 70%;
+    margin:0;
+    float: left;
+    li{
+      width: 25%;
+      color: black;
+      ul{
+        list-style: none;
+        margin-top: 10px;
+        width: 100%;
+        li{
+          height: 30px;
+          width: 100%;
+          &:hover{
+            cursor: pointer;
+            color: black;
+            animation: anim 1s ease;
+            animation-iteration-count: 1;
+          }
+        }
+        a{
+          text-decoration: none;
+          color: #403e3e;
+          display: block;
+          transition: all 0.5s linear;
+          &:hover{
+            color: black;
+          }
+        }
+        @keyframes anim {
+          0%{
+            transform: translateX(0);
+          }
+          30%{
+            transform: translateX(20px);
+          }
+          100%{
+            transform: translateX(0px);
+          }
+        }
+      }
+    }
+  }
 }

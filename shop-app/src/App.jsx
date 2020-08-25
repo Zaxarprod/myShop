@@ -10,6 +10,7 @@ import Shop from "./pages/shop/Shop";
 import connect from "react-redux/lib/connect/connect";
 import {setTranslate, setTranslateTC} from "./redux/app-reducer";
 import Info from "./pages/info/Info";
+import Contacts from "./pages/contacts/Contacts";
 
 const App = ({translate, setTranslate}) => {
     return (
@@ -33,7 +34,7 @@ const App = ({translate, setTranslate}) => {
                     <Route path={'/'} exact component={Home}/>
                     <Route path={'/shop'} component={Shop}/>
                     <Route path={'/info'} exact component={Info}/>
-                    <Route path={'/contacts'} exact component={Home}/>
+                    <Route path={'/contacts'} exact component={Contacts}/>
                 </Col>
             </Row>
             <Row>
